@@ -1,9 +1,12 @@
 package com.optimagrowth.license.repository;
 
 import com.optimagrowth.license.model.License;
-import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
 
-public interface LicenseRepository extends JpaRepository<License, String> {
+public interface LicenseRepository extends CrudRepository<License, String> {
 
-  License findByOrganizationIdAndLicenseId(String organizationId, String licenseId);
+  public List<License> findByOrganizationId(String organizationId);
+
+  public License findByOrganizationIdAndLicenseId(String organizationId, String licenseId);
 }
