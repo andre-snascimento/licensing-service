@@ -5,9 +5,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.hateoas.RepresentationModel;
 
-@Getter
-@Setter
-@ToString
+@Getter @Setter @ToString
 public class License extends RepresentationModel<License> {
 
   private int id;
@@ -16,4 +14,5 @@ public class License extends RepresentationModel<License> {
   private String organizationId;
   private String productName;
   private String licenseType;
+
 }
